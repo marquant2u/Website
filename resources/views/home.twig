@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+    {%include('head.twig')%}
+
+    <body>
+        {%include('nav.twig')%}
+        {%include('header.twig')%}
+        <div class="container">
+
+            <div class="row">
+                <div class="col-md-8 mb-5">
+                    <h2>Activité</h2>
+                    <hr>
+                    <p>L'activité principale est la conception, le developpement, et la mise en  ligne avec un suivie de site web divers.</p>
+                    <p>Ces differents sites peuvent aller du simple site vitrine presentant votre activité à une application web plus complexe regorgeant de fonctionnalitées. Chaque site web est unique et demande au préalable une analyse et une conception avant d'être lance en dévelopement/production.</p>
+                </div>
+                <div class="col-md-4 mb-5">
+                    <h2>Contacter moi</h2>
+                    <hr>
+                    <address>
+                        <strong>LM WebDev </strong>
+                        <br>12 rue solvay
+                        <br>Dombasle sur meurthe, 54110
+                        <br>
+                    </address>
+                    <address>
+                        <abbr title="Télephone">Tel:</abbr>
+                        0648879556
+                        <br>
+                        <abbr title="Email">Mail:</abbr>
+                        <a href="mailto:#">lucas.marquant54@gmail.com</a>
+                    </address>
+                </div>
+            </div>
+            <div class="row border-1 padding-30">
+                <div class="col-lg-12">
+                    <h2>Profil</h2>
+                    <hr>
+                </div>
+                <div class="col-lg-5 center-lucas">
+                    <img id="lucas" class="img-fluid" src="resources/image/lucas.png">
+                    <div><strong>Lucas Marquant</strong></div>
+                    <div>Secteur : <i>Nancy</i></div>
+                    <div>Age : <i>23</i></div>
+                </div>
+                <div class="col-lg-7">
+                    <div class="history-tl-container">
+                        <ul class="tl">
+                            <li class="tl-item" data-aos="fade-right" ng-repeat="item in retailer_history">
+                                <div class="timestamp">
+                                    2011 - 2014<br> Étude
+                                </div>
+                                <div class="item-title">Baccalauréat Scientifique Spécialité SVT</div>
+                                <div class="item-detail">Lycée Henri Poincaré, Nancy (France)</div>
+                            </li>
+                            <li class="tl-item" data-aos="fade-left" ng-repeat="item in retailer_history">
+                                <div class="timestamp">
+                                    2014 - 2017<br> Étude/Stage
+                                </div>
+                                <div class="item-title">DUT Informatique</div>
+                                <div class="item-detail">IUT Charlemagne, Nancy (France) </div>
+                                <div class="item-title">Stage en entreprise</div>
+                                <div class="item-detail">123Retraite, Nancy (France)</div>
+                            </li>
+                            <li class="tl-item" data-aos="fade-right" ng-repeat="item in retailer_history">
+                                <div class="timestamp">
+                                    2017 - 2018<br> Étude
+                                </div>
+                                <div class="item-title">Licence Professionnel CISSIE</div>
+                                <div class="item-detail">IUT Charlemagne, Nancy (France)</div>
+                            </li>
+                            <li class="tl-item" data-aos="fade-left" ng-repeat="item in retailer_history">
+                                <div class="timestamp">
+                                    2018<br> Stage
+                                </div>
+                                <div class="item-title">Stage en entreprise</div>
+                                <div class="item-detail">Institut des jeunes sourds, Jarville la malgrange (France)</div>
+                            </li>
+                            <li class="tl-item" data-aos="fade-right" ng-repeat="item in retailer_history">
+                                <div class="timestamp">
+                                    2018 - Maintenant<br> Métier
+                                </div>
+                                <div class="item-title">Autoentrepreneur</div>
+                                <div class="item-detail">Développeur web Freelance</div>
+                            </li>
+
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xl flex-title">
+                    <div class="deconstructed">
+                        Derniers projets
+                        <div>Derniers projets</div>
+                        <div>Derniers projets</div>
+                        <div>Derniers projets</div>
+                        <div>Derniers projets</div>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 mb-5" data-aos="zoom-out">
+                    <div class="card h-100">
+                        <img class="card-img-top" src="resources/image/ll.png" alt="">
+                        <div class="card-body">
+                            <h4 class="card-title">E-Commerce</h4>
+                            <p class="card-text">Site de vente d'étuits à lunette artisanel. Possibilité de créer son propre étuit sur mesure avec prévisualitation / Site réalisé sous Prestashop</p>
+                        </div>
+                        <div class="card-footer">
+                            <a target=”_blank” href="https://www.liten-lykke.com/" class="btn btn-primary">Visualiser</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-5" data-aos="zoom-out" class="test" data-aos-delay="300">
+                    <div class="card h-100">
+                        <img class="card-img-top" src="resources/image/horaire.png" alt="">
+                        <div class="card-body">
+                            <h4 class="card-title">Application Web</h4>
+                            <p class="card-text">Site intranet permettant la saisie, valitadions d'heures supplémentaires au sein de différent métier avec la supervisation (Rôle) et les calculs de compensations automatiques / Framework Slim V3.</p>
+                        </div>
+                        <div class="card-footer">
+                            <a href="#test" class="btn btn-warning" disabled>Site privée</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-5" data-aos="zoom-out" data-aos-delay="600">
+                    <div class="card h-100">
+                        <img class="card-img-top" src="resources/image/camsp.png" alt="">
+                        <div class="card-body">
+                            <h4 class="card-title">Site Vitrine</h4>
+                            <p class="card-text">Site web présentant l'activité du CAMSP situé à l'institut des sourds de la malgrange / Site réalisé sous Drupal</p>
+                        </div>
+                        <div class="card-footer">
+                            <a target=”_blank” href="https://www.camsp-da-lorraine.fr/" class="btn btn-primary">Visualiser</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="comp col-lg-12">
+                    <h2>Compétence</h2>
+                    <hr>
+                </div>
+                <section id="skillbar" class="col-lg-12">
+                    <div class="container-skillbar">
+                        <div class="skillbar clearfix " data-percent="45%">
+                            <div class="skillbar-title" style="background: #f9e090;"><span>Java</span></div>
+                            <div class="skillbar-bar" style="background: #f9e090;"></div>
+                            <div class="skill-bar-percent">45%</div>
+                        </div> <!-- Ende Skill Bar -->
+
+                        <div class="skillbar clearfix " data-percent="80%">
+                            <div class="skillbar-title" style="background: #ff935c;"><span>PHP</span></div>
+                            <div class="skillbar-bar" style="background: #ff935c;"></div>
+                            <div class="skill-bar-percent">80%</div>
+                        </div> <!-- Ende Skill Bar -->
+
+                        <div class="skillbar clearfix " data-percent="65%">
+                            <div class="skillbar-title" style="background: #ff935c;"><span>Javascript</span></div>
+                            <div class="skillbar-bar" style="background: #ff935c;"></div>
+                            <div class="skill-bar-percent">65%</div>
+                        </div> <!-- Ende Skill Bar -->
+
+                        <div class="skillbar clearfix " data-percent="55%">
+                            <div class="skillbar-title" style="background: #dc5353;"><span>SQL</span></div>
+                            <div class="skillbar-bar" style="background: #dc5353;"></div>
+                            <div class="skill-bar-percent">55%</div>
+                        </div> <!-- Ende Skill Bar -->
+
+                        <div class="skillbar clearfix " data-percent="35%">
+                            <div class="skillbar-title" style="background: #dc5353;"><span>J2E</span></div>
+                            <div class="skillbar-bar" style="background: #dc5353;"></div>
+                            <div class="skill-bar-percent">35%</div>
+                        </div> <!-- Ende Skill Bar -->
+
+                        <div class="skillbar clearfix " data-percent="70%">
+                            <div class="skillbar-title" style="background: #a72461;"><span>NodeJs</span></div>
+                            <div class="skillbar-bar" style="background: #a72461;"></div>
+                            <div class="skill-bar-percent">70%</div>
+                        </div> <!-- Ende Skill Bar -->
+                    </div><!-- Ende container Skill Bar -->
+                </section>
+            </div>
+            <!-- /.row -->
+
+            <div class="row">
+                <div class="card-comp card col-md-3 col-xs-6">
+                    <div class="card-supp">
+                        <div class="img-card img-fluid">
+                            <img src="resources/image/php.png">
+                        </div>
+                        <div class="card-title1">
+                            <h2>PHP</h2>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="card-down">
+                        <p>Framework Slim v3 / ORM Eloquent / Twig / Symphony</p>
+                    </div>
+                </div>
+                <div class="card-comp card col-md-3 col-xs-6">
+                    <div class="card-supp">
+                        <div class="img-card img-fluid">
+                            <img src="resources/image/js1.png">
+                        </div>
+                        <div class="card-title1">
+                            <h2>Javascipt</h2>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="card-down">
+                        <p>Framework Jquery , AJAX, MomentJS, etc</p>
+                    </div>
+                </div>
+                <div class="card-comp card col-md-3 col-xs-6">
+                    <div class="card-supp">
+                        <div class="img-card img-fluid">
+                            <img src="resources/image/Nodejs.png">
+                        </div>
+                        <div class="card-title1">
+                            <h2>NodeJs</h2>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="card-down">
+                        <p>Framework Express, Jade, MongoDB, VueJS</p>
+                    </div>
+                </div>
+                <div class="card-comp card col-md-3 col-xs-6">
+                    <div class="card-supp">
+                        <div class="img-card img-fluid">
+                            <img src="resources/image/git.png">
+                        </div>
+                        <div class="card-title1">
+                            <h2>Git</h2>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="card-down">
+                        <p>Maniement de Git / Pull Request / Méthode Agile, SCRUM</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </body>
+</html>
