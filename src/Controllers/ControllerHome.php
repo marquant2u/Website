@@ -13,6 +13,16 @@ class ControllerHome extends Controller
         return $this->view->render($response, 'home.twig');   
         
     }
+    
+    public function prestation($request, $response){
+        return $this->view->render($response, 'presta.twig');   
+        
+    }
+    
+    public function contact($request, $response){
+        return $this->view->render($response, 'contact.twig');   
+        
+    }
 
     public function test($request, $response){
         $test = 'Serveur qui repond lentement';

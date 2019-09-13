@@ -41,6 +41,10 @@
     background-color: #505050;
 }
 
+.content{
+    margin-top: 100px;
+}
+
 /*
 * Card css
 */
@@ -61,9 +65,11 @@
     
 }
 
-.cart-title1{
+.card-title1{
     width: 65%;
     text-align: center;
+    margin: auto;
+    align-self: center;
     margin: auto;
 }
 
@@ -356,4 +362,68 @@ ul.tl li .timestamp{
     line-height:30px;
     color:#ffffff;
     color:rgba(225, 225, 225, 0.75);
+}
+
+
+/**
+* Animated list css
+**/
+/* UL */
+.listanim {
+  width: 400px;
+  margin-top: 25px;
+}
+
+/* lI */
+
+.listanim li{
+  display: block;
+  border: 1px solid hotpink;
+  margin-bottom: 5px;
+  padding: 10px;
+  text-align: center;
+  text-transform: uppercase;
+  -webkit-animation: fadeIn 0.5s linear;
+          animation: fadeIn 0.5s linear;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+
+.listanim li:nth-child(1) {
+  -webkit-animation-delay: 0.25s;
+          animation-delay: 0.25s;
+}
+
+.listanim li:nth-child(2) {
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+
+.listanim li:nth-child(3) {
+  -webkit-animation-delay: 0.75s;
+          animation-delay: 0.75s;
+}
+
+.listanim li:nth-child(4) {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+.listanim li:nth-child(5) {
+  -webkit-animation-delay: 1.25s;
+          animation-delay: 1.25s;
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+    top: 100px;
+  }
+  75% {
+    opacity: 0.5;
+    top: 0px;
+  }
+  100% {
+    opacity: 1;
+  }
 }

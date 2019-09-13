@@ -60,7 +60,7 @@ $container['ControllerHome'] = function($container){
 
 
 $container['view']['session'] = $_SESSION;
-$container['view']['base_url'] = '/';
+$container['view']['base_url'] = '/website/';
 
 
 //Ajout des middleware
@@ -86,5 +86,7 @@ $middleware_already_co =function ($request, $response, $next) {
 
 
 $app->get('/', 'ControllerHome:home')->setName('home');
+$app->get('/prestation_tarif', 'ControllerHome:prestation')->setName('presta');
+
 
 $app->run();
