@@ -1,9 +1,10 @@
 $(document).ready(function() {
-    
+
     let test = false
     AOS.init();
+
     $(window).scroll(function() {
-        $(window).scroll(function() {
+        if ($('#skillbar').length > 0) {
             var hT = $('#skillbar').offset().top,
                 hH = $('#skillbar').outerHeight(),
                 wH = $(window).height(),
@@ -17,7 +18,6 @@ $(document).ready(function() {
                     },3000);
                 });
             }
-        });
+        }
     });
-
 });

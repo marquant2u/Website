@@ -6,8 +6,86 @@
     <body>
         {%include('nav.twig')%}
         <div class="container">
+            <div class="row col-md-12">
+                <section id="contact">
 
-            
+                    <h1 class="section-header">CONTACT</h1>
+
+                    <div class="contact-wrapper">
+
+                        <!---------------- 
+
+CONTACT PAGE LEFT 
+
+-----------------> 
+
+                        <form class="form-horizontal" role="form" method="post" action="contact.php">
+
+                            <div class="form-group">
+                                <div class="col-sm-12">
+                                    <input type="text" class="form-control" id="name" placeholder="NOM" name="name" value="">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="col-sm-12">
+                                    <input type="email" class="form-control" id="email" placeholder="EMAIL" name="email" value="">
+                                </div>
+                            </div>
+
+                            <textarea class="form-control" rows="10" placeholder="MESSAGE" name="message"></textarea>
+
+                            <button class="btn btn-primary send-button" id="submit" type="submit" value="SEND">
+                                <div class="button">
+                                    <i class="fa fa-paper-plane"></i><span class="send-text">Envoyer</span>
+                                </div>
+
+                            </button>
+
+                        </form>
+
+                        <!---------------- 
+
+CONTACT PAGE RIGHT 
+
+-----------------> 
+
+                        <div class="direct-contact-container">
+
+                            <ul class="contact-list">
+                                <li class="list-item"><i class="fa fa-map-marker fa-2x"><span class="contact-text place">Nancy | France</span></i></li>
+
+                                <li class="list-item"><i class="fa fa-phone fa-2x"><span class="contact-text phone"><a href="tel:1-212-555-5555" title="Appelez moi !">06 48 87 95 56</a></span></i></li>
+
+                                <li class="list-item"><i class="fa fa-envelope fa-2x"><span class="contact-text gmail"><a href="mailto:lucas.marquant54@gmail.com" title="Envoyez moi un mail !">lucas.marquant54@gmail.com</a></span></i></li>
+
+                            </ul>
+
+                            <hr>
+                            <ul class="social-media-list">
+                                <li><a href="https://github.com/marquant2u" target="_blank" class="contact-icon">
+                                    <i class="fab fa-github"></i></a>
+                                </li>
+                                <li><a href="#" target="_blank" class="contact-icon">
+                                    <i class="fas fa-mail-bulk"></i></a>
+                                </li>
+                                <li><a href="https://www.codeur.com/users/271985/dashboard" target="_blank" class="contact-icon">
+                                    <i class="fab fa-cuttlefish"></i></a>
+                                </li>
+                            </ul>
+                            <hr>
+
+                            <div class="copyright">&copy; Tout droit reservés</div>
+
+                        </div>
+
+                    </div>
+
+                </section>  
+
+
+            </div>
+
 
         </div>
     </body>

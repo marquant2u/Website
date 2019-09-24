@@ -87,6 +87,7 @@ $middleware_already_co =function ($request, $response, $next) {
 
 $app->get('/', 'ControllerHome:home')->setName('home');
 $app->get('/prestation_tarif', 'ControllerHome:prestation')->setName('presta');
+$app->get('/contact', 'ControllerHome:contact')->setName('contact');
 
 
 $app->run();
