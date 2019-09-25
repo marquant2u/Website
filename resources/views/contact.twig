@@ -7,19 +7,21 @@
         {%include('nav.twig')%}
         <div class="container">
             <div class="row col-md-12">
+                {% if send is defined %}
+                <div class="col">
+                    <div class="alert alert-success alert-1" role="alert">
+                        Votre mail a éte correctement envoyé ! 
+                    </div>
+                </div>
+                {% endif %}
                 <section id="contact">
 
                     <h1 class="section-header">CONTACT</h1>
 
                     <div class="contact-wrapper">
 
-                        <!---------------- 
 
-CONTACT PAGE LEFT 
-
------------------> 
-
-                        <form class="form-horizontal" role="form" method="post" action="contact.php">
+                        <form class="form-horizontal" role="form" method="post" action="{{ base_url }}send">
 
                             <div class="form-group">
                                 <div class="col-sm-12">
@@ -33,7 +35,7 @@ CONTACT PAGE LEFT
                                 </div>
                             </div>
 
-                            <textarea class="form-control" rows="10" placeholder="MESSAGE" name="message"></textarea>
+                            <textarea class="form-control" id="message" rows="10" placeholder="MESSAGE" name="message"></textarea>
 
                             <button class="btn btn-primary send-button" id="submit" type="submit" value="SEND">
                                 <div class="button">
@@ -44,11 +46,6 @@ CONTACT PAGE LEFT
 
                         </form>
 
-                        <!---------------- 
-
-CONTACT PAGE RIGHT 
-
------------------> 
 
                         <div class="direct-contact-container">
 

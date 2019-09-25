@@ -15,7 +15,7 @@ use \Psr\Http\Message\ServerRequestInterface as ServerRequestInterface;
 use \Psr\Http\Message\ResponseInterface as ResponseInterface;
 
 
-Eloquent::init('src/conf/db.ini');
+Eloquent::init('src/conf/db-final.ini');
 
 
 $app = new Slim\App([
@@ -60,7 +60,8 @@ $container['ControllerHome'] = function($container){
 
 
 $container['view']['session'] = $_SESSION;
-$container['view']['base_url'] = '/website/';
+//$container['view']['base_url'] = '/website/';
+$container['view']['base_url'] = 'https://www.lmwebdev.fr/';
 
 
 //Ajout des middleware
@@ -88,6 +89,7 @@ $middleware_already_co =function ($request, $response, $next) {
 $app->get('/', 'ControllerHome:home')->setName('home');
 $app->get('/prestation_tarif', 'ControllerHome:prestation')->setName('presta');
 $app->get('/contact', 'ControllerHome:contact')->setName('contact');
+$app->post('/send', 'ControllerHome:sendmessage')->setName('send');
 
 
 $app->run();

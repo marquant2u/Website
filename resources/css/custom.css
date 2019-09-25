@@ -223,7 +223,7 @@
     height: 0.71em;
     color: transparent;
     font-family: 'Cambay', sans-serif;
-    font-size: 10vw;
+    font-size: 8vw;
     font-weight: 700;
     letter-spacing: -0.02em;
     line-height: 1.03em;
@@ -490,6 +490,15 @@ ul.tl li .timestamp{
     line-height:30px;
     color:#ffffff;
     color:rgba(225, 225, 225, 0.75);
+}
+
+.alert-1{
+    left: 50%;
+    position: fixed;
+    margin: 5% auto;
+    margin-left: auto;
+    transform: translate(-50%);
+    z-index: 999;
 }
 
 
