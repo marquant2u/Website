@@ -32,15 +32,15 @@ class ControllerHome extends Controller
         $headers = "From: ".$_POST['name']."<".$_POST['email'].">\r\n";
         $test = "lol";
         mail($to, $subject, $message, $headers);
-        
+
         return $this->view->render($response, 'contact.twig', ["send"=> $test]);
-        
+
 
     }
 
     public function test($request, $response){
-        $test = 'Serveur qui repond lentement';
-        return $test;
+        
+        return $this->view->render($response, 'test.twig');
     }
 
 }

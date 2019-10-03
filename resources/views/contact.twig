@@ -5,12 +5,12 @@
 
     <body>
         {%include('nav.twig')%}
-        <div class="container">
+        <div class="container overflow-hidden">
             <div class="row col-md-12">
                 {% if send is defined %}
                 <div class="col">
-                    <div class="alert alert-success alert-1" role="alert">
-                        Votre mail a éte correctement envoyé ! 
+                    <div id="fadejs" class="alert alert-success alert-1 fadejs" role="alert">
+                        Votre mail a été correctement envoyé ! 
                     </div>
                 </div>
                 {% endif %}

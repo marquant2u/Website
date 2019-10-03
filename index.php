@@ -60,8 +60,8 @@ $container['ControllerHome'] = function($container){
 
 
 $container['view']['session'] = $_SESSION;
-//$container['view']['base_url'] = '/website/';
-$container['view']['base_url'] = 'https://www.lmwebdev.fr/';
+$container['view']['base_url'] = '/website/';
+//$container['view']['base_url'] = 'https://www.lmwebdev.fr/';
 
 
 //Ajout des middleware
@@ -90,6 +90,8 @@ $app->get('/', 'ControllerHome:home')->setName('home');
 $app->get('/prestation_tarif', 'ControllerHome:prestation')->setName('presta');
 $app->get('/contact', 'ControllerHome:contact')->setName('contact');
 $app->post('/send', 'ControllerHome:sendmessage')->setName('send');
+$app->get('/test', 'ControllerHome:test')->setName('test');
+
 
 
 $app->run();
