@@ -60,7 +60,7 @@ $container['ControllerHome'] = function($container){
 
 
 $container['view']['session'] = $_SESSION;
-$container['view']['base_url'] = '/website/';
+$container['view']['base_url'] = '/Website/';
 //$container['view']['base_url'] = 'https://www.lmwebdev.fr/';
 
 

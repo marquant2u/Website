@@ -6,7 +6,7 @@
     <body>
         {%include('nav.twig')%}
         {%include('header.twig')%}
-        
+
         <div class="container overflow-hidden">
 
             <div class="row border-1 padding-30">
@@ -91,54 +91,130 @@
                     </address>
                 </div>
             </div>
-            <!----
-<div class="row">
-<div class="col-xl flex-title">
-<div class="deconstructed">
-Derniers projets
-<div>Derniers projets</div>
-<div>Derniers projets</div>
-<div>Derniers projets</div>
-<div>Derniers projets</div>
-</div>
-<hr>
-</div>
-</div>
---->
             <div class="row">
-                <div class="col-md-4 mb-5" data-aos="zoom-out">
-                    <div class="card h-100">
-                        <img class="card-img-top" src="resources/image/ll.png" alt="">
-                        <div class="card-body">
-                            <h4 class="card-title">E-Commerce</h4>
-                            <p class="card-text">Site de vente d'étuits à lunette artisanel. Possibilité de créer son propre étuit sur mesure avec prévisualitation / Site réalisé sous Prestashop</p>
+                <div class="col-xl flex-title">
+                    <div class="deconstructed">
+                        Derniers projets
+                        <div>Derniers projets</div>
+                        <div>Derniers projets</div>
+                        <div>Derniers projets</div>
+                        <div>Derniers projets</div>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+            <div class="col-md-12 mb-12" style="padding: 0 0 0 0; margin-bottom: 60px" data-aos="zoom-out" data-aos-delay="100">
+                <div class="card h-100" style="border: none">
+                    <img class="card-img-top" src="resources/image/travaux.png" alt="">
+                    <div class="card-body">
+                        <h4 class="card-title">Application web</h4>
+                        <p class="card-text">Application permettant de mettre en relation des professionnels de travaux avec des clients à la recherche de devis, gérer par un administrateur. Les profesionnels remplissent leurs compétences et se voient attribuer des clients potentiels qu'ils peuvent acheter à l'unité.</p>
+                        <p class="card-text">
+                            L'administrateur répond au demande des clients en les attribuant aux professionnels désirée en utilisant des donnée de localisation a traver un back-office.</p>
+                        <hr class="my-4">
+                        <h5 style="font-style: italic">Liste non exhaustive des principals fonctionnalitées</h5>
+                        <div class="row">
+                            <div class="list-group w100">
+                                
+                                <button class="list-group-item list-group-item-action list-group-item-secondary" onclick="show(this);">Fontionnalité de l'utilisateur <span class="badge badge-primary badge-pill right">2</span></button>
+                                <ul class="list-group list-group-flush" style="display: none">
+                                    <li class="list-group-item">Demander un devis dans une catégorie de travaux</li>
+                                    <li class="list-group-item">Recevoir un identifiant unique</li>
+                                </ul>
+
+                                <button class="list-group-item list-group-item-action list-group-item-secondary" onclick="show(this);">Fontionnalité du Profesionnel <span class="badge badge-primary badge-pill right">5</span></button>
+                                <ul class="list-group list-group-flush" style="display: none">
+                                    <li class="list-group-item">Gérer ses qualifications</li>
+                                    <li class="list-group-item">Acheter un client (3D Secure)</li>
+                                    <li class="list-group-item">Consulter ses paiements</li>
+                                    <li class="list-group-item">Gérer ses paramètres</li>
+                                    <li class="list-group-item">Consulter/Mettre à jour ses documents</li>
+                                </ul>
+                                <button class="list-group-item list-group-item-action list-group-item-secondary"onclick="show(this);">Fontionnalité de l'Administrateur <span class="badge badge-primary badge-pill right">6</span></button>
+                                <ul class="list-group list-group-flush" style="display: none">
+                                    <li class="list-group-item">Consulter/Modifier les demandes clients</li>
+                                    <li class="list-group-item">Consulter/Modifier/Activer les professionnels</li>
+                                    <li class="list-group-item">Consulter ses paiements</li>
+                                    <li class="list-group-item">Créer des Professionels/Demandes</li>
+                                    <li class="list-group-item">Attribuer les demandes clients par localisation/Qualification (Distance max à laquelle les profesionnels peuvent travailler</li>
+                                    <li class="list-group-item">Créer/Supprimer des modérateurs</li>
+                                </ul>
+                            </div>
                         </div>
-                        <div class="card-footer">
-                            <a target=”_blank” href="https://www.liten-lykke.com/" class="btn btn-primary">Visualiser</a>
+                        <div class="row">
+                            <div class="column">
+                                <img class="thumb" src="resources/image/demande.png" alt="Administrateur" onclick="myFunction(this);">
+                            </div>
+                            <div class="column">
+                                <img class="thumb" src="resources/image/pro.png" alt="Administrateur" onclick="myFunction(this);">
+                            </div>
+                            <div class="column">
+                                <img class="thumb" src="resources/image/qua.png" alt="Professionnel" onclick="myFunction(this);">
+                            </div>
+                            <div class="column">
+                                <img class="thumb" src="resources/image/set.png" alt="Professionnel" onclick="myFunction(this);">
+                            </div>
+                        </div>
+
+                        <div class="bigImage">
+                            <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+                            <img id="expandedImg" style="width:100%">
+                            <div id="imgtext"></div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-4 mb-5" data-aos="zoom-out" class="test" data-aos-delay="300">
-                    <div class="card h-100">
-                        <img class="card-img-top" src="resources/image/horaire.png" alt="">
-                        <div class="card-body">
-                            <h4 class="card-title">Application Web</h4>
-                            <p class="card-text">Site intranet permettant la saisie, valitadions d'heures supplémentaires au sein de différent métier avec la supervisation (Rôle) et les calculs de compensations automatiques / Framework Slim V3.</p>
-                        </div>
-                        <div class="card-footer">
-                            <a href="#test" class="btn btn-warning" disabled>Site privée</a>
-                        </div>
+                    <div class="card-footer" style="margin-top: 20px;">
+                        <a target=”_blank” href="https://travauxfacile.com/" class="btn btn-primary">Visualiser</a>
                     </div>
                 </div>
-                <div class="col-md-4 mb-5" data-aos="zoom-out" data-aos-delay="600">
-                    <div class="card h-100">
-                        <img class="card-img-top" src="resources/image/camsp.png" alt="">
-                        <div class="card-body">
-                            <h4 class="card-title">Site Vitrine</h4>
-                            <p class="card-text">Site web présentant l'activité du CAMSP situé à l'institut des sourds de la malgrange / Site réalisé sous Drupal</p>
+            </div>
+            <div class="carbon text-center">
+                <div class="row">
+                    <div class="col-xl flex-title">
+                        <div class="deconstructed">
+                            Autres projets
+                            <div>Autres projets</div>
+                            <div>Autres projets</div>
+                            <div>Autres projets</div>
+                            <div>Autres projets</div>
                         </div>
-                        <div class="card-footer">
-                            <a target=”_blank” href="https://www.camsp-da-lorraine.fr/" class="btn btn-primary">Visualiser</a>
+                        <hr>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 mb-5" data-aos="zoom-out" data-aos-delay="200">
+                        <div class="card h-100">
+                            <img class="card-img-top" src="resources/image/ll.png" alt="">
+                            <div class="card-body">
+                                <h4 class="card-title">E-Commerce</h4>
+                                <p class="card-text">Site de vente d'étuits à lunette artisanel. Possibilité de créer son propre étuit sur mesure avec prévisualitation / Site réalisé sous Prestashop</p>
+                            </div>
+                            <div class="card-footer">
+                                <a target=”_blank” href="https://www.liten-lykke.com/" class="btn btn-primary">Visualiser</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-5" data-aos="zoom-out" class="test" data-aos-delay="500">
+                        <div class="card h-100">
+                            <img class="card-img-top" src="resources/image/horaire.png" alt="">
+                            <div class="card-body">
+                                <h4 class="card-title">Application Web</h4>
+                                <p class="card-text">Site intranet permettant la saisie, valitadions d'heures supplémentaires au sein de différent métier avec la supervisation (Rôle) et les calculs de compensations automatiques / Framework Slim V3.</p>
+                            </div>
+                            <div class="card-footer">
+                                <a href="#test" class="btn btn-warning" disabled>Site privée</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-5" data-aos="zoom-out" data-aos-delay="700">
+                        <div class="card h-100">
+                            <img class="card-img-top" src="resources/image/camsp.png" alt="">
+                            <div class="card-body">
+                                <h4 class="card-title">Site Vitrine</h4>
+                                <p class="card-text">Site web présentant l'activité du CAMSP situé à l'institut des sourds de la malgrange / Site réalisé sous Drupal</p>
+                            </div>
+                            <div class="card-footer">
+                                <a target=”_blank” href="https://www.camsp-da-lorraine.fr/" class="btn btn-primary">Visualiser</a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -208,7 +284,7 @@ Derniers projets
                         <p>Framework Slim v3 / ORM Eloquent / Twig / Symphony</p>
                     </div>
                 </div>
-                <div class="card-comp card col-md-3 col-xs-6" data-aos="zoom-out" data-aos-delay="600">
+                <div class="card-comp card col-md-3 col-xs-6" data-aos="zoom-out" data-aos-delay="200">
                     <div class="card-supp">
                         <div class="img-card img-fluid">
                             <img src="resources/image/js1.png">
@@ -222,7 +298,7 @@ Derniers projets
                         <p>Framework Jquery , AJAX, MomentJS, etc</p>
                     </div>
                 </div>
-                <div class="card-comp card col-md-3 col-xs-6" data-aos="zoom-out" data-aos-delay="1200">
+                <div class="card-comp card col-md-3 col-xs-6" data-aos="zoom-out" data-aos-delay="300">
                     <div class="card-supp">
                         <div class="img-card img-fluid">
                             <img src="resources/image/Nodejs.png">
@@ -236,7 +312,7 @@ Derniers projets
                         <p>Framework Express, Jade, MongoDB, VueJS</p>
                     </div>
                 </div>
-                <div class="card-comp card col-md-3 col-xs-6" data-aos="zoom-out" data-aos-delay="900">
+                <div class="card-comp card col-md-3 col-xs-6" data-aos="zoom-out" data-aos-delay="400">
                     <div class="card-supp">
                         <div class="img-card img-fluid">
                             <img src="resources/image/git.png">
@@ -250,7 +326,7 @@ Derniers projets
                         <p>Maniement de Git / Pull Request / Méthode Agile, SCRUM</p>
                     </div>
                 </div>
-                <div class="card-comp card col-md-3 col-xs-6" data-aos="zoom-out" data-aos-delay="1500">
+                <div class="card-comp card col-md-3 col-xs-6" data-aos="zoom-out" data-aos-delay="500">
                     <div class="card-supp">
                         <div class="img-card img-fluid">
                             <img src="resources/image/html.png">
@@ -264,7 +340,7 @@ Derniers projets
                         <p>HTML 5</p>
                     </div>
                 </div>
-                <div class="card-comp card col-md-3 col-xs-6" data-aos="zoom-out" data-aos-delay="300">
+                <div class="card-comp card col-md-3 col-xs-6" data-aos="zoom-out" data-aos-delay="600">
                     <div class="card-supp">
                         <div class="img-card img-fluid">
                             <img src="resources/image/css.png">
@@ -282,4 +358,25 @@ Derniers projets
 
         </div>
     </body>
+    <script>
+        function myFunction(imgs) {
+            var expandImg = document.getElementById("expandedImg");
+            var imgText = document.getElementById("imgtext");
+            expandImg.src = imgs.src;
+            imgText.innerHTML = imgs.alt;
+            expandImg.parentElement.style.display = "block";
+        }
+        
+        function show(but) {
+            let elem = $(but);
+            var liste = elem.next();
+            if (elem.hasClass("active")){
+                elem.removeClass("active")
+                liste.slideUp(600);
+            }else{
+                elem.addClass("active")
+                liste.slideDown(600);
+            }
+        }
+    </script>
 </html>
