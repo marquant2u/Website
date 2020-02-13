@@ -23,6 +23,25 @@
     .nav-link{
         font-size: 1.5em;
     }
+    
+    .flex-title {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 60px;
+        margin-top: 20px;
+    }
+
+    .deconstructed {
+        height: 1.5em;
+        color: transparent;
+        font-family: 'Cambay', sans-serif;
+        font-size: 8vw;
+        font-weight: 700;
+        letter-spacing: -0.02em;
+        line-height: 1.03em;
+        text-align: center;
+    }
 }
 
 /* SMALL DEVICES ONLY! */
@@ -37,6 +56,16 @@
     .title-header{
         font-size: 30px;
     }
+    
+    a.nav-link.cw.btn-one{
+        margin-top: 10px;
+        text-align: center;
+    }
+    
+    header > div > div > img{
+        margin-top: 100px;
+    }
+    
 }
 
 /* MEDIUM DEVICES (tablets, 768px and up) */
@@ -51,6 +80,14 @@
 
     .nav-link{
         font-size: 1.5em;
+    }
+    
+    .flex-title{
+        min-height: 220px
+    }
+
+    .deconstructed{
+        height: 0.71em;
     }
 }
 
@@ -293,22 +330,6 @@
 * Title css *****************************************************************************************
 */
 
-.flex-title {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 220px;
-}
-
-.deconstructed {
-    height: 0.71em;
-    color: transparent;
-    font-family: 'Cambay', sans-serif;
-    font-size: 8vw;
-    font-weight: 700;
-    letter-spacing: -0.02em;
-    line-height: 1.03em;
-}
 
 .deconstructed > div {
     position: absolute;
