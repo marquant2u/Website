@@ -29,9 +29,9 @@ $app = new Slim\App([
 
 $app->add(function(Slim\Http\Request $request, Slim\Http\Response $response, callable $next){
     $response = $response->withHeader('Access-Control-Allow-Credentials', 'true');
-	$response = $response->withHeader('Access-Control-Allow-Methods', 'OPTION, GET, POST, PUT, PATCH, DELETE');
+    $response = $response->withHeader('Access-Control-Allow-Methods', 'OPTION, GET, POST, PUT, PATCH, DELETE');
     $response = $response->withHeader('Access-Control-Allow-Headers', 'X-Requested-With, Content-Type, Accept, Origin, Authorization');
-	return $next($request, $response);
+    return $next($request, $response);
 });
 
 
@@ -39,7 +39,7 @@ $container = $app->getContainer();
 
 $container['view'] = function($container){
     $view = new \Slim\Views\Twig(__DIR__  . '/resources/views', [
-    //$view = new \Slim\Views\Twig(__DIR__  . '\resources\views', [
+        //$view = new \Slim\Views\Twig(__DIR__  . '\resources\views', [
         'cache' => false,
     ]);
 
@@ -47,7 +47,9 @@ $container['view'] = function($container){
         $container->router,
         $container->request->getUri()
 
-    ));	
+    ));
+
+    $view->getEnvironment()->addGlobal("current_path", $container["request"]->getUri()->getPath());
 
     return $view;
 };
@@ -64,17 +66,7 @@ $container['view']['base_url'] = '/Website/';
 //$container['view']['base_url'] = 'https://www.lmwebdev.fr/';
 
 
-//Ajout des middleware
 /*
-$middleware_need_co = function ($request, $response, $next) {
-    if(!isset($_SESSION['id'])){
-        return $response->withRedirect($this->router->pathFor('signin'));
-    }else {
-        return $next($request, $response);
-    }
-
-};
-
 $middleware_already_co =function ($request, $response, $next) {
     if(isset($_SESSION['id'])){
         return $response->withRedirect($this->router->pathFor('home'));
